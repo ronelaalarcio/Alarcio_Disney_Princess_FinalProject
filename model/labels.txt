@@ -1,0 +1,10 @@
+0 anna
+1 belle
+2 ariel
+3 cinderella
+4 jasmine
+5 mulan
+6 rapunzel
+7 moana
+8 elsa
+9 merida
