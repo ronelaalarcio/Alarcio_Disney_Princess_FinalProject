@@ -1,266 +1,247 @@
-# 👑 PrincessScan – Disney Princess Image Classification System
+# 👑 Disney Princess Image Classification – Machine Learning Final Project
 
-An intelligent **image classification system** powered by **Deep Learning and Convolutional Neural Networks (CNNs)** that accurately identifies **Disney Princess characters** from images. PrincessScan is designed for **academic projects, research demonstrations, and real‑world image recognition applications**.
+A comprehensive machine learning project utilizing Convolutional Neural Networks (CNNs) and deep learning to automatically classify Disney Princess characters from images. This final project demonstrates an end-to-end ML pipeline with real-world computer vision applications.
 
 ---
 
 ## 📋 Overview
 
-**PrincessScan** is a supervised machine learning application that uses computer vision to classify Disney Princess characters from uploaded images. This project showcases a complete **end-to-end deep learning workflow**, from dataset preparation and CNN training to evaluation and deployment readiness.
+This project applies deep learning and computer vision techniques to classify images of 10 Disney Princess characters. The model learns visual features such as facial structure, hairstyle, clothing color, and accessories to accurately identify each princess.
 
 ### Project Scope
-
-* **Type**: Supervised Learning – Image Classification  
-* **Algorithm**: Convolutional Neural Networks (CNN)  
-* **Dataset**: Disney Princess Image Dataset  
-* **Problem**: Multi-class classification  
-* **Accuracy Target**: 90%+  
-* **Deployment Ready**: Yes (with inference scripts)  
+- **Type**: Supervised Learning – Image Classification  
+- **Algorithm**: Convolutional Neural Networks (CNN)  
+- **Dataset**: Custom-collected Disney Princess images  
+- **Problem**: Multi-class image classification (10 classes)  
+- **Accuracy Target**: 90%+  
+- **Deployment Ready**: Yes (prediction scripts included)
 
 ---
 
 ## 🎯 Project Objectives
 
-* 👑 Accurately classify Disney Princess characters from images  
-* 📌 Implement a complete deep learning pipeline  
-* 🧠 Apply CNNs to a real-world image recognition problem  
-* 📊 Analyze and visualize model performance  
-* 📱 Prepare the model for mobile and web deployment  
-* 🎓 Demonstrate practical AI & ML skills for academic use  
+- 📌 Build a high-accuracy image classification model  
+- 📌 Implement a complete ML pipeline (data → model → evaluation)  
+- 📌 Apply CNNs to real-world image classification  
+- 📌 Analyze and visualize model performance  
+- 📌 Create reusable training and prediction scripts  
+- 📌 Demonstrate production-ready ML practices  
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Component                 | Technology              |
-| ------------------------- | ----------------------- |
-| **Language**              | Python 3.8+             |
-| **Deep Learning**         | TensorFlow / Keras      |
-| **Image Processing**      | OpenCV, PIL             |
-| **Data Analysis**         | NumPy, Pandas           |
-| **Visualization**         | Matplotlib, Seaborn     |
-| **ML Utilities**          | Scikit-learn            |
-| **Notebooks**             | Jupyter / Google Colab  |
-| **Deployment (Optional)** | Flask / TensorFlow Lite |
+| Component | Technology |
+|----------|-----------|
+| Language | Python 3.8+ |
+| Deep Learning | TensorFlow / Keras |
+| Data Processing | NumPy, Pandas |
+| Image Processing | OpenCV, PIL |
+| Visualization | Matplotlib, Seaborn |
+| ML Utilities | Scikit-learn |
+| Notebooks | Jupyter / Google Colab |
 
 ---
 
 ## 📂 Project Structure
 
+```text
 Alarcio_Disney_Princess_FinalProject/
 │
-├── Images/ # Raw Disney Princess images
-│ ├── Anna/
-│ ├── Belle/
-│ ├── Ariel/
-│ ├── Cinderella/
-│ ├── Jasmine/
-│ ├── Mulan/
-│ ├── Rapunzel/
-│ ├── Moana/
-│ ├── Elsa/
-│ └── Merida/
-│
-├── data/ # Processed images for training/testing
-│ ├── train/
-│ ├── val/
-│ └── test/
+├── data/
+│   ├── raw/
+│   │   └── princess_images/
+│   │       ├── Anna/
+│   │       ├── Ariel/
+│   │       ├── Belle/
+│   │       ├── Cinderella/
+│   │       ├── Elsa/
+│   │       ├── Jasmine/
+│   │       ├── Merida/
+│   │       ├── Moana/
+│   │       ├── Mulan/
+│   │       └── Rapunzel/
+│   │
+│   └── processed/
+│       ├── train/
+│       ├── val/
+│       └── test/
 │
 ├── models/
-│ ├── trained_model.h5
-│ ├── model_weights.h5
-│ └── model_architecture.json
+│   ├── trained_model.h5
+│   ├── model_weights.h5
+│   └── model_architecture.json
 │
 ├── notebooks/
-│ ├── 01_data_exploration.ipynb
-│ ├── 02_data_preprocessing.ipynb
-│ ├── 03_model_development.ipynb
-│ ├── 04_model_training.ipynb
-│ └── 05_evaluation_analysis.ipynb
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   ├── 03_model_development.ipynb
+│   ├── 04_model_training.ipynb
+│   └── 05_evaluation_analysis.ipynb
 │
 ├── src/
-│ ├── preprocessing.py
-│ ├── model.py
-│ ├── train.py
-│ ├── evaluate.py
-│ └── predict.py
+│   ├── __init__.py
+│   ├── preprocessing.py
+│   ├── model.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+│
+├── Images/
+│   ├── AccuracyPerClass.png
+│   ├── AccuracyPerEpoch_Loss.png
+│   └── Confusion_matrix.png
 │
 ├── results/
-│ ├── confusion_matrix.png
-│ ├── accuracy_curve.png
-│ ├── loss_curve.png
-│ └── classification_report.txt
+│   └── classification_report.txt
 │
 ├── requirements.txt
 ├── README.md
 └── LICENSE
+📊 Dataset Information
+Princess Classes
+Anna
 
-yaml
+Ariel
+
+Belle
+
+Cinderella
+
+Elsa
+
+Jasmine
+
+Merida
+
+Moana
+
+Mulan
+
+Rapunzel
+
+Dataset Details
+Image Size: 150 × 150 pixels
+
+Color Space: RGB
+
+Data Split: 60% Train / 20% Validation / 20% Test
+
+Normalization: Pixel values scaled to [0, 1]
+
+Augmentation: Rotation, Flip, Zoom, Brightness
+
+🧠 CNN Architecture
+text
 Copy code
-
----
-
-## 📊 Dataset Information
-
-### 🎭 Princess Class Labels
-
-| Class ID | Princess Name |
-| -------- | ------------- |
-| 0        | Anna          |
-| 1        | Belle         |
-| 2        | Ariel         |
-| 3        | Cinderella    |
-| 4        | Jasmine       |
-| 5        | Mulan         |
-| 6        | Rapunzel      |
-| 7        | Moana         |
-| 8        | Elsa          |
-| 9        | Merida        |
-
-### Dataset Characteristics
-
-* **Total Classes**: 10 Disney Princesses  
-* **Image Size**: 150 × 150 pixels  
-* **Color Space**: RGB  
-* **Image Format**: JPG / PNG  
-* **Split Ratio**:  
-  - Training: 60%  
-  - Validation: 20%  
-  - Testing: 20%  
-* **Data Augmentation**:  
-  - Rotation (±20°)  
-  - Horizontal Flip  
-  - Zoom (0.2)  
-  - Brightness Adjustment  
-
----
-
-## 🧠 CNN Architecture
-
-### Model Flow
-
-INPUT (150×150×3)
+Input Layer (150×150×3)
 ↓
-Conv2D (32) + ReLU
+Conv2D + ReLU + BatchNorm
 ↓
 MaxPooling
 ↓
-Conv2D (64) + ReLU
+Conv2D + ReLU + BatchNorm
 ↓
 MaxPooling
 ↓
-Conv2D (128) + ReLU
+Conv2D + ReLU + BatchNorm
 ↓
 MaxPooling
 ↓
 Flatten
 ↓
-Dense (256) + ReLU + Dropout(0.5)
+Dense (256) + Dropout
 ↓
-Dense (128) + ReLU
+Dense (128) + Dropout
 ↓
-Output (10 classes) + Softmax
-
-yaml
+Output Layer (10) + Softmax
+⚙️ Training Configuration
+python
 Copy code
+optimizer = Adam(learning_rate=0.001)
+loss = CategoricalCrossentropy()
+metrics = ['accuracy']
 
-### Model Specifications
+model.fit(
+    train_data,
+    validation_data=val_data,
+    epochs=50,
+    batch_size=32,
+    callbacks=[
+        EarlyStopping(patience=5),
+        ReduceLROnPlateau(patience=3)
+    ]
+)
+📈 Performance Summary
+Training Accuracy: ~96%
 
-| Layer        | Description                |
-| ------------ | -------------------------- |
-| Input        | 150×150×3 RGB image        |
-| Conv Block 1 | 32 filters, 3×3, ReLU      |
-| Conv Block 2 | 64 filters, 3×3, ReLU      |
-| Conv Block 3 | 128 filters, 3×3, ReLU     |
-| Dense        | 256 units + Dropout        |
-| Output       | 10 units, Softmax          |
-| Total Params | ~2.7M trainable parameters |
+Validation Accuracy: ~94%
 
----
+Test Accuracy: ~93%
 
-## 📈 Model Performance (Sample Results)
+Best Classified: Rapunzel, Merida
 
-| Metric              | Score |
-| ------------------- | ----- |
-| Training Accuracy   | 96%   |
-| Validation Accuracy | 94%   |
-| Testing Accuracy    | 93%   |
-| Precision           | 93%   |
-| Recall              | 94%   |
-| F1‑Score            | 0.93  |
+Most Confused: Elsa ↔ Anna
 
-### Observations
+📊 Results Visualization
 
-* Best classified: **Rapunzel & Merida** (distinct visual features)  
-* Most confused: **Elsa ↔ Anna** (similar dress tones)  
-* Overall performance shows strong generalization  
+Figure 1: Accuracy per Disney Princess class.
 
----
 
-## 🚧 Development Status
+Figure 2: Training and validation accuracy and loss.
 
-* [x] Dataset preparation  
-* [x] Data preprocessing & augmentation  
-* [x] CNN model design  
-* [x] Model training & tuning  
-* [x] Performance evaluation  
-* [x] Prediction script  
-* [ ] Transfer learning (VGG / ResNet)  
-* [ ] Mobile optimization (TensorFlow Lite)  
-* [ ] Web API deployment  
 
----
+Figure 3: Confusion matrix showing prediction results.
 
-## 🔮 Future Enhancements
+🚀 Usage
+Train the Model
+bash
+Copy code
+python src/train.py
+Predict an Image
+bash
+Copy code
+python src/predict.py --image path/to/image.jpg
+Evaluate the Model
+bash
+Copy code
+python src/evaluate.py
+🚧 Known Limitations
+Similar character appearances may cause confusion
 
-### Short-Term
+Performance depends on image quality and lighting
 
-* Increase dataset size  
-* Try transfer learning (EfficientNet, MobileNet)  
-* Hyperparameter tuning  
+Model trained only on selected princess classes
 
-### Medium-Term
+🔮 Future Improvements
+Increase dataset size
 
-* Flask / FastAPI deployment  
-* Web interface for image upload  
-* REST API documentation  
+Apply transfer learning (MobileNet / ResNet)
 
-### Long-Term
+Convert model to TensorFlow Lite
 
-* Android app integration  
-* Real-time camera classification  
-* Explainable AI (Grad-CAM)  
-* Model compression for edge devices  
+Integrate with mobile application
 
----
+Add real-time camera classification
 
-## 🎓 Educational Value
-
+🎓 Educational Value
 This project demonstrates:
 
-* End-to-end CNN pipeline  
-* Multi-class image classification  
-* Deep learning model evaluation  
-* Practical AI application design  
-* Deployment-ready ML workflow  
+Complete machine learning pipeline
 
----
+CNN-based image classification
 
-## 📄 License
+Dataset preprocessing and augmentation
 
-This project is developed for **academic and educational purposes** only.
+Model evaluation and analysis
 
----
+Real-world ML application
 
-## 👤 Author
+📄 License
+This project is intended for academic and educational purposes.
 
-**Ronela Alarcio**  
-
-* **Program**: BS Information Technology (BSIT)  
-* **Project Type**: Final Project  
-* **Year**: 2025  
-
----
-
-✨ *Classifying Disney Princesses with AI — one image at a time!* 👑🧠
-
+👤 Author
+Rone La Alarcio
+BS Information Technology (BSIT)
+Final Project – Machine Learning
+December 2025
