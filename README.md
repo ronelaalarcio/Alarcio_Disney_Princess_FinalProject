@@ -49,57 +49,56 @@ An intelligent **image classification system** powered by **Deep Learning and Co
 Alarcio_Disney_Princess_FinalProject/
 │
 ├── data/
-│ ├── raw/
-│ │ └── princess_images/
-│ │ ├── Anna/
-│ │ ├── Belle/
-│ │ ├── Ariel/
-│ │ ├── Cinderella/
-│ │ ├── Jasmine/
-│ │ ├── Mulan/
-│ │ ├── Rapunzel/
-│ │ ├── Moana/
-│ │ ├── Elsa/
-│ │ └── Merida/
-│ └── processed/
-│ ├── train/
-│ ├── val/
-│ └── test/
+│   ├── raw/
+│   │   └── princess_images/
+│   │       ├── Anna/
+│   │       ├── Ariel/
+│   │       ├── Belle/
+│   │       ├── Cinderella/
+│   │       ├── Elsa/
+│   │       ├── Jasmine/
+│   │       ├── Merida/
+│   │       ├── Moana/
+│   │       ├── Mulan/
+│   │       └── Rapunzel/
+│   │
+│   └── processed/
+│       ├── train/
+│       ├── val/
+│       └── test/
 │
 ├── models/
-│ ├── trained_model.h5
-│ ├── model_weights.h5
-│ └── model_architecture.json
+│   ├── trained_model.h5          # Final trained model
+│   ├── model_weights.h5          # Saved model weights
+│   └── model_architecture.json  # Model architecture
 │
 ├── notebooks/
-│ ├── 01_data_exploration.ipynb
-│ ├── 02_data_preprocessing.ipynb
-│ ├── 03_model_development.ipynb
-│ ├── 04_model_training.ipynb
-│ └── 05_evaluation_analysis.ipynb
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   ├── 03_model_development.ipynb
+│   ├── 04_model_training.ipynb
+│   └── 05_evaluation_analysis.ipynb
 │
 ├── src/
-│ ├── init.py
-│ ├── preprocessing.py
-│ ├── model.py
-│ ├── train.py
-│ ├── evaluate.py
-│ └── predict.py
+│   ├── __init__.py
+│   ├── preprocessing.py         # Image preprocessing & augmentation
+│   ├── model.py                 # CNN architecture
+│   ├── train.py                 # Training script
+│   ├── evaluate.py              # Evaluation & metrics
+│   └── predict.py               # Image prediction script
 │
-├── Images/ # All result images
-│ ├── AccuracyPerClass.png
-│ ├── AccuracyPerEpoch_Loss.png
-│ └── Confusion_matrix.png
+├── Images/                       # Result visualizations
+│   ├── AccuracyPerClass.png
+│   ├── AccuracyPerEpoch_Loss.png
+│   └── Confusion_matrix.png
 │
 ├── results/
-│ └── classification_report.txt
+│   └── classification_report.txt
 │
 ├── requirements.txt
 ├── README.md
 └── LICENSE
 
-yaml
-Copy code
 
 ---
 
