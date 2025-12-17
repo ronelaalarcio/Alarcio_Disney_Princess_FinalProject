@@ -192,8 +192,8 @@ Output (10 classes) + Softmax
 
 ### Observations
 
-* Best classified: **Elsa & Anna** (distinct visual features)
-* Most confused: **Belle ↔ Cinderella** (similar dress tones)
+* Best classified: **Rapunzel & Merida** (distinct visual features)
+* Most confused: **Elsa ↔ Anna** (similar dress tones)
 * Overall performance shows strong generalization
 
 ---
@@ -255,7 +255,7 @@ This project is developed for **academic and educational purposes** only.
 
 ## 👤 Author
 
-**[Your Name Here]**
+**Ronela Alarcio**
 
 * **Program**: BS Information Technology (BSIT)
 * **Project Type**: Final Project
