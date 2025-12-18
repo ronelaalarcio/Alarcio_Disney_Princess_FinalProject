@@ -1,0 +1,48 @@
+name: disney_princess_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  camera: ^0.10.6
+  provider: ^6.1.2
+  google_fonts: ^6.3.3
+  intl: ^0.20.2
+  path_provider: ^2.1.4
+  image: ^4.2.0
+  image_picker: ^1.1.2
+  permission_handler: ^12.0.1
+
+  # Firebase dependencies
+  firebase_core: ^4.2.1
+  firebase_auth: ^6.1.2
+  cloud_firestore: ^6.1.0
+  firebase_storage: ^13.0.4
+  firebase_analytics: ^12.0.4
+
+  # TensorFlow Lite package for ML model inference
+  tflite_flutter: ^0.12.1
+
+  # Linting package
+  flutter_lints: ^6.0.0
+
+  # Charting library for analytics dashboard
+  fl_chart: ^0.68.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/model_unquant.tflite
+    - assets/labels.txt
