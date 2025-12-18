@@ -189,7 +189,7 @@ This project is intended for **academic and educational purposes only**.
 
 ### 🧑‍💻 Author
 
-**Rone La Alarcio**  
+**Ronela T. Alarcio**  
 BS Information Technology  
 Caraga State University  
 December 2025
