@@ -1,150 +1,129 @@
-# 👑 Disney Princess Image Classification – Machine Learning Final Project
+# 👑 Disney Princess Recognition App 👸✨
 
-A comprehensive machine learning project utilizing Convolutional Neural Networks (CNNs) and deep learning to automatically classify Disney Princess characters from images. This final project demonstrates an end-to-end ML pipeline with real-world computer vision applications.
+A mobile image classification application built with **Flutter** and **TensorFlow Lite**.  
+This intelligent app detects and classifies **10 Disney Princess characters** from images using deep learning and computer vision.
 
 ---
 
 ## 📋 Overview
 
-This project applies deep learning and computer vision techniques to classify images of 10 Disney Princess characters. The model learns visual features such as facial structure, hairstyle, clothing color, and accessories to accurately identify each princess.
-
-### Project Scope
-- **Type**: Supervised Learning – Image Classification  
-- **Algorithm**: Convolutional Neural Networks (CNN)  
-- **Dataset**: Custom-collected Disney Princess images  
-- **Problem**: Multi-class image classification (10 classes)  
-- **Accuracy Target**: 90%+  
-- **Deployment Ready**: Yes (prediction scripts included)
+The **Disney Princess Recognition App** leverages **Convolutional Neural Networks (CNNs)** to recognize Disney Princess characters from images. Users can capture photos using the device camera or select images from the gallery, and the app will instantly classify the princess with confidence scores.
 
 ---
 
-## 🎯 Project Objectives
+## 🎯 Project Scope
 
-- 📌 Build a high-accuracy image classification model  
-- 📌 Implement a complete ML pipeline (data → model → evaluation)  
-- 📌 Apply CNNs to real-world image classification  
-- 📌 Analyze and visualize model performance  
-- 📌 Create reusable training and prediction scripts  
-- 📌 Demonstrate production-ready ML practices  
+This project provides:
+- **Image-based princess recognition** from camera and gallery
+- **10 Disney Princess classifications**
+- **High-accuracy predictions** (>90%)
+- **User-friendly Flutter interface**
+- **Analytics dashboard** for model performance
+- **Educational princess profiles**
+- **Cloud integration** using Firebase
+
+---
+
+## 🎓 Project Objectives
+
+1. Develop a real-world CNN-based image classification app  
+2. Achieve high classification accuracy for Disney Princess characters  
+3. Provide a simple and intuitive user interface  
+4. Optimize inference speed for mobile devices  
+5. Track model performance through analytics  
+6. Demonstrate ethical and educational AI usage  
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Component | Technology |
-|----------|-----------|
-| Language | Python 3.8+ |
-| Deep Learning | TensorFlow / Keras |
-| Data Processing | NumPy, Pandas |
-| Image Processing | OpenCV, PIL |
-| Visualization | Matplotlib, Seaborn |
-| ML Utilities | Scikit-learn |
-| Notebooks | Jupyter / Google Colab |
+### Frontend & Mobile
+- **Framework**: Flutter 3.x  
+- **Language**: Dart  
+- **UI**: Material Design 3  
+
+### Machine Learning
+- **Framework**: TensorFlow Lite (TFLite)
+- **Model Type**: Convolutional Neural Network (CNN)
+- **Model File**: `princess_model.tflite`
+
+### Backend
+- **Firebase Core**
+- **Cloud Firestore**
+- **Firebase Analytics**
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
-```text
-Alarcio_Disney_Princess_FinalProject/
-│
-├── data/
-│   ├── raw/
-│   │   └── princess_images/
-│   │       ├── Anna/
-│   │       ├── Ariel/
-│   │       ├── Belle/
-│   │       ├── Cinderella/
-│   │       ├── Elsa/
-│   │       ├── Jasmine/
-│   │       ├── Merida/
-│   │       ├── Moana/
-│   │       ├── Mulan/
-│   │       └── Rapunzel/
-│   │
-│   └── processed/
-│       ├── train/
-│       ├── val/
-│       └── test/
-│
-├── models/
-│   ├── trained_model.h5
-│   ├── model_weights.h5
-│   └── model_architecture.json
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_data_preprocessing.ipynb
-│   ├── 03_model_development.ipynb
-│   ├── 04_model_training.ipynb
-│   └── 05_evaluation_analysis.ipynb
-│
-├── src/
-│   ├── __init__.py
-│   ├── preprocessing.py
-│   ├── model.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── predict.py
-│
-├── Images/
-│   ├── AccuracyPerClass.png
-│   ├── AccuracyPerEpoch_Loss.png
-│   └── Confusion_matrix.png
-│
-├── results/
-│   └── classification_report.txt
-│
-├── requirements.txt
-├── README.md
-└── LICENSE
-📊 Dataset Information
-Princess Classes
-Anna
+```
+Disney_Princess_App/
+├── lib/
+│ ├── main.dart
+│ ├── home_page.dart
+│ ├── gallery_page.dart
+│ ├── princess_classes_page.dart
+│ ├── analytics.dart
+│ ├── models/
+│ │ └── princess_class.dart
+│ ├── widgets/
+│ │ ├── app_footer.dart
+│ │ └── princess_image_widget.dart
+│ └── theme/
+├── assets/
+│ ├── princess_model.tflite
+│ ├── labels.txt
+│ └── princess_images/
+├── android/
+├── ios/
+├── web/
+├── pubspec.yaml
+└── test/
+```
 
-Ariel
+---
 
-Belle
+## 📊 Dataset Information
 
-Cinderella
+- **Total Images**: ~1,500  
+- **Image Size**: 150 × 150 RGB  
+- **Data Split**:
+  - 60% Training
+  - 20% Validation
+  - 20% Testing  
 
-Elsa
+### Princess Classes (10)
 
-Jasmine
+| ID | Princess |
+|----|----------|
+| 1 | Anna |
+| 2 | Elsa |
+| 3 | Ariel |
+| 4 | Belle |
+| 5 | Cinderella |
+| 6 | Jasmine |
+| 7 | Rapunzel |
+| 8 | Merida |
+| 9 | Moana |
+| 10 | Snow White |
 
-Merida
+---
 
-Moana
+## 🧠 CNN Architecture
 
-Mulan
-
-Rapunzel
-
-Dataset Details
-Image Size: 150 × 150 pixels
-
-Color Space: RGB
-
-Data Split: 60% Train / 20% Validation / 20% Test
-
-Normalization: Pixel values scaled to [0, 1]
-
-Augmentation: Rotation, Flip, Zoom, Brightness
-
-🧠 CNN Architecture
-text
-Copy code
+### Model Architecture Diagram
+```
 Input Layer (150×150×3)
 ↓
-Conv2D + ReLU + BatchNorm
+Conv2D + ReLU
 ↓
 MaxPooling
 ↓
-Conv2D + ReLU + BatchNorm
+Conv2D + ReLU
 ↓
 MaxPooling
 ↓
-Conv2D + ReLU + BatchNorm
+Conv2D + ReLU
 ↓
 MaxPooling
 ↓
@@ -152,96 +131,65 @@ Flatten
 ↓
 Dense (256) + Dropout
 ↓
-Dense (128) + Dropout
-↓
 Output Layer (10) + Softmax
-⚙️ Training Configuration
-python
-Copy code
-optimizer = Adam(learning_rate=0.001)
-loss = CategoricalCrossentropy()
-metrics = ['accuracy']
+```
 
-model.fit(
-    train_data,
-    validation_data=val_data,
-    epochs=50,
-    batch_size=32,
-    callbacks=[
-        EarlyStopping(patience=5),
-        ReduceLROnPlateau(patience=3)
-    ]
-)
-📈 Performance Summary
-Training Accuracy: ~96%
+---
 
-Validation Accuracy: ~94%
+## 📈 Performance Metrics
 
-Test Accuracy: ~93%
+| Metric | Result |
+|------|--------|
+| Training Accuracy | ~96% |
+| Validation Accuracy | ~94% |
+| Testing Accuracy | ~93% |
+| Precision | ~93% |
+| Recall | ~94% |
+| F1-Score | ~0.93 |
+| Inference Time | ~250–400 ms |
 
-Best Classified: Rapunzel, Merida
+### Insights
+- Best classified: **Rapunzel, Merida**
+- Most confused: **Elsa ↔ Anna**
 
-Most Confused: Elsa ↔ Anna
+---
 
-📊 Results Visualization
+## 🚀 Development Status
 
-Figure 1: Accuracy per Disney Princess class.
+### ✅ Completed
+- CNN training and TFLite conversion
+- Image classification via camera & gallery
+- Confidence score display
+- Firebase integration
+- Multi-platform Flutter support
 
+### ⏳ Planned
+- Transfer learning (MobileNet / ResNet)
+- Real-time video classification
+- Model quantization
+- Mobile deployment enhancements
 
-Figure 2: Training and validation accuracy and loss.
+---
 
+## 📚 Educational Value
 
-Figure 3: Confusion matrix showing prediction results.
+- CNN-based image classification
+- Dataset preprocessing & augmentation
+- Model evaluation and analysis
+- Edge AI deployment using TensorFlow Lite
+- Cross-platform Flutter development
 
-🚀 Usage
-Train the Model
-bash
-Copy code
-python src/train.py
-Predict an Image
-bash
-Copy code
-python src/predict.py --image path/to/image.jpg
-Evaluate the Model
-bash
-Copy code
-python src/evaluate.py
-🚧 Known Limitations
-Similar character appearances may cause confusion
+---
 
-Performance depends on image quality and lighting
+## 📄 License
 
-Model trained only on selected princess classes
+This project is intended for **academic and educational purposes only**.
 
-🔮 Future Improvements
-Increase dataset size
+---
 
-Apply transfer learning (MobileNet / ResNet)
+### 🧑‍💻 Author
 
-Convert model to TensorFlow Lite
-
-Integrate with mobile application
-
-Add real-time camera classification
-
-🎓 Educational Value
-This project demonstrates:
-
-Complete machine learning pipeline
-
-CNN-based image classification
-
-Dataset preprocessing and augmentation
-
-Model evaluation and analysis
-
-Real-world ML application
-
-📄 License
-This project is intended for academic and educational purposes.
-
-👤 Author
-Rone La Alarcio
-BS Information Technology (BSIT)
-Final Project – Machine Learning
+**Rone La Alarcio**  
+BS Information Technology  
+Caraga State University  
 December 2025
