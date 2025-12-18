@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "177298854294",
+    "firebase_url": "https://alarcio-disneyprincess-7df98-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "alarcio-disneyprincess-7df98",
+    "storage_bucket": "alarcio-disneyprincess-7df98.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177298854294:android:ac053ab25d546e1d514db7",
+        "android_client_info": {
+          "package_name": "com.example.disney_princess_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-MnQvtt8zstgaBiQ4ILQLv2_nwXLzVXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
